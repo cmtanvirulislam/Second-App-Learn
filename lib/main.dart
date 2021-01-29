@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:liquid_swipe/liquid_swipe.dart';
 
 void main() {
   runApp(MyApp());
@@ -7,8 +8,25 @@ void main() {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    final con = [
+      Container(
+        color: Colors.red,
+      ),
+      Container(
+        color: Colors.green,
+      ),
+      Container(
+        color: Colors.yellow,
+      ),
+      Container(
+        color: Colors.blue,
+      ),
+    ];
     return MaterialApp(
-
+      debugShowCheckedModeBanner: false,
+      home: Scaffold(
+        body: LiquidSwipe(pages: con,),
+      ),
     );
   }
 }
