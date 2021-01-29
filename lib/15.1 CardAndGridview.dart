@@ -13,6 +13,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         body: GridView.count(
+          mainAxisSpacing: 10,
           crossAxisCount: 2,
           children: <Widget>[
             Container(
