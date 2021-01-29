@@ -8,25 +8,18 @@ void main() {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    final con = [
-      Container(
-        color: Colors.red,
-      ),
-      Container(
-        color: Colors.green,
-      ),
-      Container(
-        color: Colors.yellow,
-      ),
-      Container(
-        color: Colors.blue,
-      ),
-    ];
-    return MaterialApp(
+        return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        body: LiquidSwipe(pages: con,)
-      ),
+        body: Center(
+          child: Card(
+            child: Container(
+              height: 200,
+              width: 200,
+            ),
+          ),
+        ),
+       ),
     );
   }
 }
