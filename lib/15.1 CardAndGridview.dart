@@ -14,6 +14,7 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         body: GridView.count(
           mainAxisSpacing: 10,
+          crossAxisSpacing: 10,
           crossAxisCount: 2,
           children: <Widget>[
             Container(
