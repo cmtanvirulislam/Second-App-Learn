@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:liquid_swipe/liquid_swipe.dart';
 
@@ -15,7 +16,7 @@ class MyApp extends StatelessWidget {
           child: Card(
             elevation: 20,
             shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.all(Radius.circular(60))
+              borderRadius: BorderRadius.only(bottomRight: Radius.circular(50))
             ),
             child: Container(
               height: 200,
