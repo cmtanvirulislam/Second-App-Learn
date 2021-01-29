@@ -13,6 +13,10 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         body: Center(
           child: Card(
+            elevation: 20,
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.all(Radius.circular(50))
+            ),
             child: Container(
               height: 200,
               width: 200,
