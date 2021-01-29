@@ -16,8 +16,8 @@ class MyApp extends StatelessWidget {
           child: Card(
             elevation: 20,
             shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.only(bottomRight: Radius.circular(50))
-            ),
+              borderRadius: BorderRadius.only(bottomRight: Radius.circular(50), topLeft: Radius.circular(50)),
+              ),
             child: Container(
               height: 200,
               width: 200,
