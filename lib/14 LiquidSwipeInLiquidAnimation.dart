@@ -25,7 +25,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        body: LiquidSwipe(pages: con,)
+          body: LiquidSwipe(pages: con,)
       ),
     );
   }
