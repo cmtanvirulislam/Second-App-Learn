@@ -10,10 +10,10 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        body: Column(
+        body: Row(
           children: <Widget>[
             Expanded(
-                flex: 7,
+                flex: 1,
                 child: Container(color: Colors.deepPurple,)),
             Expanded(
                 flex: 1,
