@@ -14,11 +14,15 @@ class MyApp extends StatefulWidget {
   @override
   _MyAppState createState() => _MyAppState();
 }
-
 class _MyAppState extends State<MyApp> {
   PageController conpage= PageController(
     initialPage: 0,
   );
+  @override
+  void dispose() {
+    conpage.dispose();
+    super.dispose();
+  }
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
