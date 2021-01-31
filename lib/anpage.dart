@@ -7,12 +7,13 @@ class anpage extends StatelessWidget {
     return Scaffold(
       body: Center(
         child: Container(
+          color: Colors.red,
           child: Hero(
             tag: "go",
             child: Icon(
               Icons.access_alarm,
               size: 250,
-              color: Colors.purple,
+              color: Colors.white70,
             ),
           ),
         ),
