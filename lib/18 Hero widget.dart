@@ -21,13 +21,14 @@ class HomePage extends StatelessWidget {
       body: Center(
         child: CircleAvatar(
           radius: 100,
+          backgroundColor: Colors.black,
           child: GestureDetector(
             child: Hero(
               tag: "go",
               child: Icon(
                 Icons.access_alarm,
                 size: 80,
-                color: Colors.cyan,
+                color: Colors.deepOrange,
               ),
             ),
             onTap: (){
