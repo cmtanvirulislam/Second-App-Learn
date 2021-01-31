@@ -27,6 +27,7 @@ class HomePage extends StatelessWidget {
               child: Icon(
                 Icons.access_alarm,
                 size: 80,
+                color: Colors.cyan,
               ),
             ),
             onTap: (){

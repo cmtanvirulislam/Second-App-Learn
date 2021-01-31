@@ -12,6 +12,7 @@ class anpage extends StatelessWidget {
             child: Icon(
               Icons.access_alarm,
               size: 250,
+              color: Colors.purple,
             ),
           ),
         ),
