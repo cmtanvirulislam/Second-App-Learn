@@ -18,6 +18,7 @@ class _MyAppState extends State<MyApp> {
         body: CustomScrollView(
           slivers: [
             SliverAppBar(
+              pinned: true,
               expandedHeight: 150,
               backgroundColor: Colors.teal,
               flexibleSpace: FlexibleSpaceBar(
