@@ -29,6 +29,7 @@ class _MyAppState extends State<HomePageTest> {
           decoration: BoxDecoration(
             gradient: LinearGradient(
               begin: Alignment.center,
+              end: Alignment.bottomCenter,
               colors: [Colors.deepOrange,Colors.pink]
             ),
           ),
