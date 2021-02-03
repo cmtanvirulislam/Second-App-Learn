@@ -42,7 +42,7 @@ class _MyAppState extends State<HomePageTest> {
               begin: Alignment.center,
               end: Alignment.bottomCenter,
               //tileMode: TileMode.repeated,
-              colors: [Colors.deepOrange,Colors.pink]
+              colors: [Colors.white70,Colors.white38]
             ),
           ),
         ),
