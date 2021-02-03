@@ -25,12 +25,23 @@ class _MyAppState extends State<HomePageTest> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
+        appBar: AppBar(
+          flexibleSpace: Container(
+            decoration: BoxDecoration(
+              gradient: LinearGradient(
+                  begin: Alignment.center,
+                  end: Alignment.bottomCenter,
+                  colors: [Colors.black54,Colors.black45]
+              ),
+            ),
+          ),
+        ),
         body: Container(
           decoration: BoxDecoration(
             gradient: LinearGradient(
               begin: Alignment.center,
               end: Alignment.bottomCenter,
-              tileMode: TileMode.repeated,
+              //tileMode: TileMode.repeated,
               colors: [Colors.deepOrange,Colors.pink]
             ),
           ),
