@@ -9,7 +9,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: HomePageTest()
+      home: HomePageTest(),
     );
   }
 }
@@ -28,8 +28,8 @@ class _MyAppState extends State<HomePageTest> {
         body: Container(
           decoration: BoxDecoration(
             gradient: LinearGradient(
-              colors: [Colors.deepOrange,Colors.pinkAccent]
-            )
+              colors: [Colors.deepOrange,Colors.pink]
+            ),
           ),
         ),
       ),
