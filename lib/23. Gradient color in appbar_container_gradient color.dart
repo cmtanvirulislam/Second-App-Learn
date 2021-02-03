@@ -30,6 +30,7 @@ class _MyAppState extends State<HomePageTest> {
             gradient: LinearGradient(
               begin: Alignment.center,
               end: Alignment.bottomCenter,
+              tileMode: TileMode.repeated,
               colors: [Colors.deepOrange,Colors.pink]
             ),
           ),
