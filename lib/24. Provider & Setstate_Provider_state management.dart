@@ -21,6 +21,11 @@ class HomePageTest1 extends StatefulWidget {
 
 class _HomePageTest1State extends State<HomePageTest1> {
   int value= 0;
+  Increment(){
+    setState(() {
+      value ++;
+    });
+  }
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -28,7 +33,12 @@ class _HomePageTest1State extends State<HomePageTest1> {
         body: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Text(value.toString(), style: TextStyle(fontSize: 100),)
+            Text(value.toString(), style: TextStyle(fontSize: 100),),
+            RaisedButton(
+                onPressed: (){
+                  Increment();
+                },
+            )
           ],
         ),
       ),
