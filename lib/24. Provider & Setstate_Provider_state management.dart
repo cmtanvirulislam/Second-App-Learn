@@ -1,23 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:secondapp/data.dart';
-
-void main() => runApp(
-    ChangeNotifierProvider(builder: (context) => Data(), child: MyApp()));
-
-class MyApp extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: HomePageTest1(),
-    );
-  }
-}
-
-import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
-import 'package:secondapp/data.dart';
+import 'package:secondapp/receive.dart';
 
 void main() {
   runApp(
@@ -32,6 +16,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: HomePage(),
     );
   }
@@ -60,6 +45,11 @@ class _HomePageState extends State<HomePage> {
                 onPressed: () {
                   providerdata.Increment();
                 },
+              ),
+              RaisedButton(
+                onPressed: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => ReceiveData()));
+                },
               )
             ],
           ),
@@ -68,4 +58,3 @@ class _HomePageState extends State<HomePage> {
     );
   }
 }
-

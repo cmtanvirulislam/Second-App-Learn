@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:secondapp/data.dart';
+import 'package:secondapp/receive.dart';
 
 void main() {
   runApp(
@@ -43,6 +44,11 @@ class _HomePageState extends State<HomePage> {
               RaisedButton(
                 onPressed: () {
                   providerdata.Increment();
+                },
+              ),
+              RaisedButton(
+                onPressed: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => ReceiveData()));
                 },
               )
             ],
