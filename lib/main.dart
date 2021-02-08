@@ -1,30 +1,54 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:liquid_swipe/liquid_swipe.dart';
+import 'package:provider/provider.dart';
+import 'package:secondapp/data.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(
+    ChangeNotifierProvider(
+      create: (context) => Data(),
+      child: MyApp(),
+    ),
+  );
 }
 
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-        return MaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Scaffold(
+      home: HomePage(),
+    );
+  }
+}
+
+class HomePage extends StatefulWidget {
+  @override
+  _HomePageState createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+  @override
+  Widget build(BuildContext context) {
+    final providerdata = Provider.of<Data>(context);
+    return SafeArea(
+      child: Scaffold(
         body: Center(
-          child: Card(
-            elevation: 20,
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.only(bottomRight: Radius.circular(50), topLeft: Radius.circular(50)),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              Text(
+                providerdata.value.toString(),
+                style: TextStyle(fontSize: 100),
               ),
-            child: Container(
-              height: 200,
-              width: 200,
-            ),
+              RaisedButton(
+                onPressed: () {
+                  providerdata.Increment();
+                },
+              )
+            ],
           ),
         ),
-       ),
+      ),
     );
   }
 }
