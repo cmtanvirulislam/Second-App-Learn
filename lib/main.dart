@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
-
+import 'package:secondapp/14%20LiquidSwipeInLiquidAnimation.dart';
 void main(){
   runApp(MyApp());
 }
@@ -9,53 +8,37 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: MyHomePage(),
+      debugShowCheckedModeBanner: false,
+      home: MyHome(),
     );
   }
 }
 
-class MyHomePage extends StatefulWidget {
+class MyHome extends StatefulWidget {
   @override
-  _MyHomePageState createState() => _MyHomePageState();
+  _MyHomeState createState() => _MyHomeState();
 }
 
-class _MyHomePageState extends State<MyHomePage> {
+class _MyHomeState extends State<MyHome> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: RaisedButton(onPressed: () {
-          showModalBottomSheet(context: context, builder: (context){
-            return Container(
-              height: 250,
-              child: Column(
-                children: <Widget>[
-                  ListTile(
-                    title: Text("One"),
-                    subtitle: Text("This is One"),
-                    trailing: Icon(Icons.access_alarm),
-                  ),
-                  ListTile(
-                    title: Text("Two"),
-                    subtitle: Text("This is Two"),
-                    trailing: Icon(Icons.access_alarm),
-                  ),
-                  ListTile(
-                    title: Text("Three"),
-                    subtitle: Text("This is Three"),
-                    trailing: Icon(Icons.access_alarm),
-                  ),
+        child: RaisedButton(
+          onPressed: (){
+            showDialog(context: context,
+            builder: (context){
+              return AlertDialog(
+                title: Text("Alert"),
+                content: Text("This is a simple Alert Dialog"),
+                actions: <Widget>[
+                  RaisedButton(onPressed: (){Navigator.pop(context);}, child: Text("Ok"),)
                 ],
-              ),
-            );
-          });
-        }, child: Text("Click Me"),),
+              );
+            });
+          }, child: Text("Click"),
+        ),
       ),
     );
   }
 }
-
