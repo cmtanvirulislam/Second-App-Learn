@@ -27,8 +27,8 @@ class _HomeState extends State<Home> {
     return SafeArea(
         child: Scaffold(
       body: Center(
-        child: Transform.rotate(
-          angle: pi/4,
+        child: Transform.scale(
+          scale: 1.5,
         child: Container(
         height: 200,
           width: 200,
