@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 import 'package:secondapp/17%20Pageview.dart';
 
@@ -20,42 +22,19 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
-  DateTime _dateTime;
-  TimeOfDay _timeOfDay;
-  getDate() async {
-    DateTime date = await showDatePicker(
-        context: context,
-        initialDate: DateTime(DateTime.now().year),
-        firstDate: DateTime(DateTime.now().year-20),
-        lastDate: DateTime(DateTime.now().year+10));
-    setState(() {
-      _dateTime=date;
-    });
-  }
-  getTime() async {
-    TimeOfDay time= await showTimePicker(context: context, initialTime: TimeOfDay.now());
-    setState(() {
-      _timeOfDay=time;
-    });
-  }
   @override
   Widget build(BuildContext context) {
     return SafeArea(
         child: Scaffold(
       body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            _dateTime==null?Text("Choose Date"):Text("Date: ${_dateTime.year},${_dateTime.month},${_dateTime.day}",style: TextStyle(fontSize: 50),),
-            _timeOfDay==null?Text("Choose Time"):Text("Time: ${_timeOfDay.hour}-${_timeOfDay.minute}",style: TextStyle(fontSize: 50),),
-            RaisedButton(onPressed: () {
-              getDate();
-            }),
-            RaisedButton(onPressed: () {
-              getTime();
-            }),
-          ],
+        child: Transform.rotate(
+          angle: pi/4,
+        child: Container(
+        height: 200,
+          width: 200,
+          color: Colors.pink,
         ),
+      ),
       ),
     ));
   }
